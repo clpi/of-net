@@ -1,0 +1,100 @@
+[package]
+name = "of-net"
+version = "0.1.0"
+edition = "2021"
+default-run = "serve"
+
+[[bin]]
+name = "serve"
+path = "src/bin/serve.rs"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+# actix-cors = "0.7.0"
+# actix-files = "0.6.5"
+# actix-http = "3.6.0"
+# actix-multipart = "0.6.1"
+# actix-session = "0.9.0"
+anyhow = { version = "1.0.79", features = ["backtrace"] }
+async-executor = "1.8.0"
+async-stream = "0.3.5"
+async-task = { version = "4.7.0", features = ["portable-atomic"] }
+async-trait = "0.1.77"
+cookie = { version = "0.18.0", features = ["private"] }
+crossbeam = { version = "0.8.4", features = ["crossbeam-channel", "crossbeam-deque"] }
+derive_more = { version = "0.99.17", features = ["peg", "generate-parsing-rs", "track-caller"] }
+futures-lite = { version = "2.2.0", features = ["memchr"] }
+http = "1.0.0"
+httparse = "1.8.0"
+log = "0.4.20"
+mime = "0.3.17"
+ntex-grpc-derive = "0.6.0"
+nanorand = "0.7.0"
+ntex = { version = "1.1.0", features = ["url", "tokio",  "tls-rustls", "rustls", "cookie", "compress", "openssl"] }
+ntex-bytes = { version = "0.1.24", features = ["simd"] }
+ntex-connect = { version = "1.0.0", features = ["tokio", "ntex-tokio", "tls-rustls", "webpki-roots"] }
+ntex-cors = "0.5.0"
+ntex-files = "0.4.1"
+ntex-grpc = "0.6.2"
+ntex-h2 = "0.5.0"
+ntex-identity = "0.4.0"
+ntex-io = "1.0.1"
+ntex-macros = "0.1.3"
+ntex-mqtt = "1.0.0"
+# ntex-multipart = "0.4.0"
+ntex-redis = "1.0.0"
+ntex-router = "0.5.3"
+ntex-session = "0.4.0"
+ntex-util = "1.0.1"
+petgraph = { version = "0.6.4", features = ["generate", "serde", "serde_derive"] }
+pin-project-lite = "0.2.13"
+polling = "3.4.0"
+serde = { version = "1.0.196", features = ["derive"] }
+time = { version = "0.3.34", features = ["std", "formatting", "macros", "parsing", "serde", "serde-human-readable"] }
+tokio = { version = "1.36.0", features = ["full"] }
+tokio-serde = { version = "0.9.0", features = ["rmp-serde", "serde", "json", "serde_json", "bincode", "bincode-crate", "serde_cbor", "cbor", "educe", "messagepack"] }
+tokio-stream = { version = "0.1.14", features = ["full"] }
+tokio-util = { version = "0.7.10", features = ["full"] }
+url = "2.5.0"
+rbatis = { version = "4.5.13", features = ["rbatis-macro-driver"] }
+async-sse = "5.1.0"
+strum_macros = "0.26.1"
+dotenvy = "0.15.7"
+ntex-http = "0.1.12"
+ntex-tokio = "0.4.0"
+openssl = "0.10.63"
+futures = "0.3.30"
+async-io = "2.3.1"
+tokio-executor = "0.1.10"
+tokio-threadpool = "0.1.18"
+blocking = "1.5.1"
+loom = "0.7.1"
+byteorder = "1.5.0"
+jobserver = "0.1.28"
+ntex-amqp = { version = "1.0.2", features = ["frame-trace"] }
+tracing = { version = "0.1.40", features = ["async-await"] }
+tracing-subscriber = { version = "0.3.18", features = ["env-filter"] }
+async-event = "0.1.0"
+parking_lot = "0.12.1"
+arbitrary = { version = "1.3.2", features = ["derive"] }
+futures-executor-preview = "0.2.2"
+futures-io-preview = "0.2.2"
+futures-core-preview = "0.2.3"
+futures-util-preview = "0.2.2"
+futures-channel-preview = "0.2.2"
+futures-sink-preview = "0.2.2"
+futures-bounded = "0.2.3"
+tokio-openssl = "0.6.4"
+event-listener = { version = "5.0.0", features = ["portable-atomic"] }
+event-listener-strategy = "0.5.0"
+ntex-service = "2.0.1"
+ntex-rt = { version = "0.4.11", features = ["tokio", "futures-channel"] }
+ntex-rt-macros = "0.1.1"
+# ntex-prost-build = "0.11.13"
+ntex-grpc-codegen = "0.2.11"
+# ntex-multipart = "0.4.0"
+# ntex-prost-derive = "0.10.3"
+ntex-helmet = "0.1.3"
+
+[dev-dependencies]
